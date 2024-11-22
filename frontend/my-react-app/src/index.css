@@ -1,13 +1,91 @@
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  padding: 20px;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.button-group button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.button-group button.primary {
+  background-color: #007bff;
+}
+
+.button-group button.secondary {
+  background-color: #6c757d;
+}
+
+.button-group button.dark {
+  background-color: #343a40;
+}
+
+.button-group button:hover {
+  opacity: 0.9;
+}
+
+.server-status {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+button.small {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+button.warning {
+  background-color: #ffc107;
+  color: black;
+}
+
+button.danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.success {
+  background-color: #28a745;
+  color: white;
+}
+
+button.small:hover {
+  opacity: 0.9;
 }
