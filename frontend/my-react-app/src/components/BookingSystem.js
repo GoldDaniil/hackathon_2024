@@ -1,11 +1,9 @@
-// src/components/BookingSystem.js
 import React from 'react';
-import './BookingSystem.css'; // Импортируем CSS-файл для стилей
+import { useNavigate } from 'react-router-dom';
+import './BookingSystem.css';
 
 const BookingSystem = () => {
-  const handleButtonClick = (buttonText) => {
-    alert(`Вы нажали: ${buttonText}`);
-  };
+  const navigate = useNavigate(); // Для перехода между страницами
 
   return (
     <div>
@@ -14,9 +12,27 @@ const BookingSystem = () => {
       </div>
       <div className="content container">
         <div className="mb-3">
-          <button className="btn btn-primary" onClick={() => handleButtonClick('Мониторинг')}>Мониторинг</button>
-          <button className="btn btn-secondary" onClick={() => handleButtonClick('Бронирование')}>Бронирование</button>
-          <button className="btn btn-dark" onClick={() => handleButtonClick('Настройки')}>Настройки</button>
+          {/* Переход на страницу Мониторинга */}
+          <button
+            className="btn btn-primary"
+            onClick={() => navigate('/monitoring')}
+          >
+            Мониторинг
+          </button>
+          {/* Переход на страницу Бронирования */}
+          <button
+            className="btn btn-secondary"
+            onClick={() => navigate('/booking')}
+          >
+            Бронирование
+          </button>
+          {/* Переход на страницу Настроек */}
+          <button
+            className="btn btn-dark"
+            onClick={() => navigate('/settings')}
+          >
+            Настройки
+          </button>
         </div>
         <div className="server-status">
           <h2>Статус серверов</h2>
@@ -33,15 +49,15 @@ const BookingSystem = () => {
                 <td>Server 1</td>
                 <td>Работает</td>
                 <td>
-                  <button className="btn btn-warning btn-sm" onClick={() => handleButtonClick('Перезапустить')}>Перезапустить</button>
-                  <button className="btn btn-danger btn-sm" onClick={() => handleButtonClick('Остановить')}>Остановить</button>
+                  <button className="btn btn-warning btn-sm">Перезапустить</button>
+                  <button className="btn btn-danger btn-sm">Остановить</button>
                 </td>
               </tr>
               <tr>
                 <td>Server 2</td>
                 <td>Неактивен</td>
                 <td>
-                  <button className="btn btn-success btn-sm" onClick={() => handleButtonClick('Запустить')}>Запустить</button>
+                  <button className="btn btn-success btn-sm">Запустить</button>
                 </td>
               </tr>
             </tbody>

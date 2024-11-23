@@ -4,52 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Система бронирования</title>
-    <link rel="stylesheet" href="../src/index.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Система бронирования ресурсов</h1>
-    </div>
-    <div class="content">
-        <div class="button-group">
-            <button class="primary" onclick="handleClick('Мониторинг')">Мониторинг</button>
-            <button class="secondary" onclick="handleClick('Бронирование')">Бронирование</button>
-            <button class="dark" onclick="handleClick('Настройки')">Настройки</button>
-        </div>
-        <div class="server-status">
-            <h2>Статус серверов</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Сервер</th>
-                        <th>Статус</th>
-                        <th>Действия</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Server 1</td>
-                        <td>Работает</td>
-                        <td>
-                            <button class="small warning" onclick="handleClick('Перезапустить')">Перезапустить</button>
-                            <button class="small danger" onclick="handleClick('Остановить')">Остановить</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Server 2</td>
-                        <td>Неактивен</td>
-                        <td>
-                            <button class="small success" onclick="handleClick('Запустить')">Запустить</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <script>
-        function handleClick(action) {
-            alert(`Вы нажали: ${action}`);
-        }
-    </script>
+    <div id="root"></div> <!-- React рендерит приложение в этот div -->
 </body>
 </html>

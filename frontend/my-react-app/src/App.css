@@ -14,3 +14,9 @@ body {
 .server-status {
   margin-top: 20px;
 }
+
+.nav-button {
+  cursor: pointer; /* Убедитесь, что курсор меняется */
+  text-decoration: none; /* Уберите подчёркивание, если нужно */
+  display: inline-block; /* Убедитесь, что элемент не "сжат" */
+}
