@@ -8,7 +8,7 @@ DATABASE_URL = "postgresql://gold:1234@localhost:5432/resource_booking"
 
 engine = create_engine(DATABASE_URL)#создание подключения к базе данных
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)#настроим сессию для работы с базой данных
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)#настраиваем сессию для работы с базой данных
 
 Base = declarative_base()#определение базового класса для моделей
 
