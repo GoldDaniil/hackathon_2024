@@ -20,3 +20,26 @@ body {
   text-decoration: none; /* Уберите подчёркивание, если нужно */
   display: inline-block; /* Убедитесь, что элемент не "сжат" */
 }
+
+.monitoring-page {
+  text-align: center;
+}
+
+.monitoring-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.server-item {
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.server-item strong {
+  color: #333;
+}
